@@ -90,8 +90,9 @@ function mostrarArchivo(archivo){
             //lo colocamos en la seccion2
             document.getElementById("s2").innerHTML = textoHTML;
         }
-        //document.getElementsByClassName("mostarHtml").innerHTML = data.//Aqui obtendremos nuestro HTML
-        //document.getElementById("verTexto") //Preaparamos index.js para recibir los objetos MD y HTML
+        //extraemos nuestros objetos
+        document.getElementsByClassName("mostarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
+        document.getElementById("verTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
     })
 
 }
