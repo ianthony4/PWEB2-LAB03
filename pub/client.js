@@ -26,7 +26,11 @@ function listando(){
 function listar(x){
     let lista = `<ul><br>`;
     for(let i=0;i<x.length;i++){
-        lista += `<li>`+x[i]+`</li>`;
+        //Mostrar solo archivos MD
+        if(x[i].substring(x[i].length -2,x[i].length)=="md"){
+            //Mostrar archivos sin el ".md", debido a que aseguramos mostrar solo .MD
+            lista += `<li>`+x[i].substring(0,x[i].length-3)+`</li>`;
+        }
     }
     lista += `</ul><br>`;
     //retornando
