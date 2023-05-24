@@ -5,12 +5,17 @@
 const fs = require('fs') //Esto ayudara a listar directorios
 const path = require('path')
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 app.use(express.static('pub'))
 
 app.listen(3000, () => {
     console.log("Escuchando en http://localhost:3000")
 }); 
+
+//Body Parser nos ayudara a acceder al contenido del cuerpo en cada peticion
+//utilizamos body-parser
+app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'index.html'))
