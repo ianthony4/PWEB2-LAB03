@@ -29,7 +29,9 @@ function listar(x){
         //Mostrar solo archivos MD
         if(x[i].substring(x[i].length -2,x[i].length)=="md"){
             //Mostrar archivos sin el ".md", debido a que aseguramos mostrar solo .MD
-            lista += `<li>`+x[i].substring(0,x[i].length-3)+`</li>`;
+            //Para poder abrir, los archivos añadimos un evento
+            let nombreArchivo = x[i].substring(0,x[i].length-3);
+            lista += `<li onclick="mostrarArchivo('${nombreArchivo}')">`+nombreArchivo+`</li>`;
         }
     }
     lista += `</ul><br>`;
@@ -39,5 +41,7 @@ function listar(x){
 
 //Añadiendo EVENTO para que se muestre la lista
 document.addEventListener("DOMContentLoaded",listando());
-//Segunda funcion para almacenar archivo nuevo
-
+//Funcion que me mostrara el archivo al hacerle click 
+function mostrarArchivo(archivo){
+    console.log("Este es el archivo "+archivo);
+}
