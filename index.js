@@ -25,11 +25,11 @@ app.get('/', (request, response) => {
 
 //Responder a la peticion para guardar archivos
 app.post('/guardar',(request,response) => {
-        let titulo = request.body.title + ".md"; //Extraemos del JSON el titulo
-        let contenido = request.body.content; //Extraemo del JSON el contenido
+        let elTitulo = request.body.titulo + ".md"; //Extraemos del JSON el titulo
+        let elContenido = request.body.contenido; //Extraemo del JSON el contenido
     
     //Creamos un archivo y le asignamos un titulo y contenido correspondiente
-    fs.writeFile(path.resolve(__dirname,'/private',titulo), contenido, function(err){
+    fs.writeFile(path.resolve(__dirname,'private/',elTitulo), elContenido, function(err){
         if(err){ 
             //En caso de error, mostrara la razon
             console.log("No se logro crear un archivo : ");
