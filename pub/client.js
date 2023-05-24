@@ -17,7 +17,7 @@ function listarArchivos(){
         response => response.json()
     ).then(
         //Aqui vamos a recorrer los archivos que estan almacenados en "data"
-        document.getElementById("s1").innerHTML = ""
+        document.getElementById("s1").innerHTML = listar(data)
     );
 }
 //Funcion para recorrer el arreglo y listarlo
