@@ -9,19 +9,27 @@
         <!--De manera opcional aqui podemos agregar una hoja de estilo-->
     </head>
     <body>
-        <h2>Archivos Markdown</h2>
-        <!-- Aqui iran los labels y el llamada a las diferentes funciones-->
+        <!--Repartiremos el cuerpo del html en 3 secciones para una mejor interpretacion-->
+        <!--s1 -> seccion 1 // s2 -> seccion2 // s3 -> seccion 3-->
+        <div id="s1">
+            <h2>Archivos Markdown</h2>
+            <!-- Aqui iran los labels y el llamada a las diferentes funciones-->
+            
+            <!--este boton creara nuevos archivos, llamando a la funcion 'crearNuevoArchivo()'-->
+            <input type="button" id="nuevoArchivo" value="Archivo Nuevo" onclick="crearNuevoArchivo()">
+        </div>
+        <div id="s2">
+            <h2>Contenido Markdown</h2>
+            <!--TextArea desabilitado debido a que por ahora lo usaremos para ver el contenido del markdown-->
+            <textarea id="verTexto" rows="30" cols="80" disabled></textarea>
+            <h2>Contenido en HTML</h2>
+            <!--Aqui remplazaremos en el futuo, seguramente usando un DIV para intercambiarlo por el innnerHTML-->
+        </div>
+        <div id="s3">
+            <p>Chaisa Fernandez, Anthony Leonel</p>
+            <a href="https://github.com/ianthony4/PWEB2-LAB03">Repositorio de esste proyecto</a>
+        </div>
         
-        <!--este boton creara nuevos archivos, llamando a la funcion 'crearNuevoArchivo()'-->
-        <input type="button" id="nuevoArchivo" value="Archivo Nuevo" onclick="crearNuevoArchivo()">
-        <h2>Contenido Markdown</h2>
-        <!--TextArea desabilitado debido a que por ahora lo usaremos para ver el contenido del markdown-->
-        <textarea id="verTexto" rows="30" cols="80" disabled></textarea>
-        <h2>Contenido en HTML</h2>
-        <!--Aqui remplazaremos en el futuo, seguramente usando un DIV para intercambiarlo por el innnerHTML-->
-        <p>Chaisa Fernandez, Anthony Leonel</p>
-        <a href="https://github.com/ianthony4/PWEB2-LAB03">Repositorio de esste proyecto</a>
-        <div id="remplazo"></div>
     </body>
     
 </html>
