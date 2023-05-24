@@ -1,5 +1,6 @@
 //Lado del cliente
+//Creando la funcion
 function crearNuevoArchivo(){
     let remplazo = `<h2>Esto es un nuevo Archivo</h2>`;
-    document.getElementById("remplazo").innerHTML = remplazo;
+    document.getElementById("s2").innerHTML = remplazo;
 }
