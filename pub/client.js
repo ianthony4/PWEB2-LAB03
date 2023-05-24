@@ -60,6 +60,8 @@ function almacenarArchivoNuevo(){
     }
     fetch(url, request);
     let html = '<textarea type="text" id="elTexto" rows="30" cols="80" disable></textarea><br>';
+    //vamos a crear otra espacio para poner el archivo MD arriba y el HTML traducido abajo
+        html += '<div class="mostrarHtml"></div><br>';
     document.getElementById("s2").innerHTML = html; //Mostramos area de texto para observar el texto
     listando(); //Actualizamos la lista
 }
@@ -77,6 +79,7 @@ function mostrarArchivo(archivo){
         headers : {"Content-Type" : "application/json"},
         body : JSON.stringify(data), //Convertimos el objeto en JSON (Serializamos)
     }
+    //promesa
     fetch(url, request).then(response => response.json())
     .then(data => {
         
