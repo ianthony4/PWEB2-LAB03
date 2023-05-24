@@ -27,6 +27,8 @@ function listar(data){
         lista += `<li>`+data[i]+`</li>`;
     }
     lista += `</ul><br>`;
+    //retornando
+    return lista;
 }
 //Segunda funcion para almacenar archivo nuevo
 
