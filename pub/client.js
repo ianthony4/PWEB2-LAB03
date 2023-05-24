@@ -64,7 +64,18 @@ function almacenarArchivoNuevo(){
     listando(); //Actualizamos la lista
 }
 
-//Funcion que me mostrara el archivo al hacerle click 
+//Funcion que me mostrara (LEER) el archivo al hacerle click 
 function mostrarArchivo(archivo){
-    //por avanzar
+    let elTitulo = archivo;
+    const url = "http://localhost:3000/leer";
+    const data = {
+        //Almacenmos el titulo
+        titulo : elTitulo,
+    }
+    const request = { //Objeto para el server
+        method : "POST", //metodo
+        headers : {"Content-Type" : "application/json"},
+        body : JSON.stringify(data), //Convertimos el objeto en JSON (Serializamos)
+    }
+
 }
