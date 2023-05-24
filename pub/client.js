@@ -16,15 +16,17 @@ function listarArchivos(){
     fetch(url).then(
         response => response.json()
     ).then(
-        //Aqui vamos a recorrer los archivos que estan almacenados en "data"
-        document.getElementById("s1").innerHTML = listar(data)
+        data => {
+            //Aqui vamos a recorrer los archivos que estan almacenados en "data"
+            document.getElementById("s1").innerHTML = listar(data);
+        }
     );
 }
 //Funcion para recorrer el arreglo y listarlo
-function listar(data){
+function listar(x){
     let lista = `<ul><br>`;
     for(let i=0;i<data.length;i++){
-        lista += `<li>`+data[i]+`</li>`;
+        lista += `<li>`+x[i]+`</li>`;
     }
     lista += `</ul><br>`;
     //retornando
