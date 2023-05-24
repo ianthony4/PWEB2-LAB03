@@ -61,10 +61,13 @@ function almacenarArchivoNuevo(){
     fetch(url, request);
     let html = '<textarea type="text" id="elTexto" rows="30" cols="80" disable></textarea><br>';
     //vamos a crear otra espacio para poner el archivo MD arriba y el HTML traducido abajo
-        html += '<div class="mostrarHtml"></div><br>';
+    //usamos class para GetElementByClass
+    html += '<div class="mostrarHtml"></div><br>';
     document.getElementById("s2").innerHTML = html; //Mostramos area de texto para observar el texto
     listando(); //Actualizamos la lista
 }
+
+var textoHTML; //Variable para mostrar el texto en diferentes lugares (global)
 
 //Funcion que me mostrara (LEER) el archivo al hacerle click 
 function mostrarArchivo(archivo){
@@ -82,7 +85,13 @@ function mostrarArchivo(archivo){
     //promesa
     fetch(url, request).then(response => response.json())
     .then(data => {
-        
+        //Si no existe el tag, es porque no se almaceno archivo nuevo, entonces solo mostrar 
+        if(document.getElementsByClassName("mostrarHtml") == null){
+            //lo colocamos en la seccion2
+            document.getElementById("s2").innerHTML = textoHTML;
+        }
+        //document.getElementsByClassName("mostarHtml").innerHTML = data.//Aqui obtendremos nuestro HTML
+        //document.getElementById("verTexto") //Preaparamos index.js para recibir los objetos MD y HTML
     })
 
 }
