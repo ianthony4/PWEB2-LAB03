@@ -8,3 +8,17 @@ function crearNuevoArchivo(){
                     <input type="button" id="almacenarArchivo" value="Creando Archivo" onclick="almacenarArchivoNuevo()">`;
     document.getElementById("s2").innerHTML = remplazo;
 }
+//Listar Archivos
+//Esta funcion pedira al servidor la lista de archivos
+function listarArchivos(){
+    //en esta direccion sacaremos la informacion
+    const url = "http://localhost:3000/listando";
+    fetch(url).then(
+        response => response.json()
+    ).then(
+        //Aqui vamos a recorrer los archivos que estan almacenados en "data"
+        document.getElementById("s1").innerHTML = ""
+    );
+}
+//Segunda funcion para almacenar archivo nuevo
+
