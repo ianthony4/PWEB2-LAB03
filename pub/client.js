@@ -2,9 +2,9 @@
 //Creando la funcion
 function crearNuevoArchivo(){
     let remplazo = `<h4>Titulo</h4>
-                    <input type="text" id="textTitle" size="50"><br><br>
+                    <input type="text" id="elTitulo" size="50"><br><br>
                     <h4>Ingrese Contenido Markdown</h4>
-                    <textarea type="verTexto" rows="30" cols="80"></textarea><br>
+                    <textarea type="elTexto" rows="30" cols="80"></textarea><br>
                     <input type="button" id="almacenarArchivo" value="Creando Archivo" onclick="almacenarArchivoNuevo()">`;
     document.getElementById("s2").innerHTML = remplazo;
 }
@@ -46,7 +46,9 @@ function mostrarArchivo(archivo){
     //por avanzar
 }
 
-//Funcion que creara el archivo Nuevo
+//Funcion que creara el archivo Nuevo 
+//Usa la primera funcion de CrearNuevoArchivo()
 function almacenarArchivoNuevo(){
-    
+    const nombreArchivo = document.getElementById("elTitulo").value;
+    const contenidoArchivo = document.getElementById("elContenido").value;
 }
