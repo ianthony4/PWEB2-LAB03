@@ -41,10 +41,7 @@ function listar(x){
 
 //Añadiendo EVENTO para que se muestre la lista
 document.addEventListener("DOMContentLoaded",listando());
-//Funcion que me mostrara el archivo al hacerle click 
-function mostrarArchivo(archivo){
-    //por avanzar
-}
+
 
 //Funcion que creara el archivo Nuevo 
 //Usa la primera funcion de CrearNuevoArchivo()
@@ -65,4 +62,9 @@ function almacenarArchivoNuevo(){
     let html = '<textarea type="text" id="elTexto" rows="30" cols="80" disable></textarea><br>';
     document.getElementById("s2").innerHTML = html; //Mostramos area de texto para observar el texto
     listando(); //Actualizamos la lista
+}
+
+//Funcion que me mostrara el archivo al hacerle click 
+function mostrarArchivo(archivo){
+    //por avanzar
 }
