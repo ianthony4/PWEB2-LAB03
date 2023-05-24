@@ -64,7 +64,9 @@ app.get('/listando', (request, response) => {
 
 //Ya podemos CREAR, ahora debemos LEER estos archivos
 app.post("/leer",(request, response)=> {
-
+    //extraemos el titulo del JSON request
+    let elTitulo = request.body.titulo + ".md";
+    
 })
 
 
