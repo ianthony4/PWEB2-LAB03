@@ -27,17 +27,19 @@
 </theader>
 <tbody>
 <tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 2</td></tr>
-<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Git - GitHub</td></tr>
+<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Ajax y NodeJS</td></tr>
 <tr>
-<td>NÚMERO DE PRÁCTICA:</td><td>01</td><td>AÑO LECTIVO:</td><td>2023 A</td><td>NRO. SEMESTRE:</td><td>III</td>
+<td>NÚMERO DE PRÁCTICA:</td><td>03</td><td>AÑO LECTIVO:</td><td>2023 A</td><td>NRO. SEMESTRE:</td><td>III</td>
 </tr>
 <tr>
-<td>FECHA DE PRESENTACIÓN:</td><td colspan="2">07-05-2023</td><td>HORA DE PRESENTACIÓN:</td><td colspan="2">por definir</td>
+<tr><td>REPOSITORIO:</td><td colspan="5">https://github.com/ianthony4/PWEB2-LAB03.git</td></tr>
+</tr>
+<tr>
+<td>FECHA DE PRESENTACIÓN:</td><td colspan="2">24-05-2023</td><td>HORA DE PRESENTACIÓN:</td><td colspan="2">por definir</td>
 </tr>
 <tr><td colspan="4">INTEGRANTE (s):
 <ul>
 <li>Chaisa Fernandez, Anthony Leonel</li>
-<li>INTEGRANTE 2</li>
 </ul>
 </td>
 <td>NOTA:</td><td>Pendiente</td>
@@ -58,29 +60,27 @@
 </theader>
 <tbody>
 <tr><td>I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS<br>
-A. Repositorios del trabajo individual (Laboratorio 01)
-<ul>
-<li>https://github.com/ianthony4/23ALAB00.git</li>
-<li>segunda URL</li>
-</ul>
-B. Solucion del Trabajo Grupal:<br>
+A. Solucion del Trabajo Grupal:<br>
 <br>Pasos a detalle...
 <br>1.
 <br>2.
 <br>3.
 </td></tr>
 <tr><td>II. SOLUCIÓN DEL CUESTIONARIO<br>
-A. ¿Por qué Git y GitHub es una herramienta importante en el curso de Programación Web 2?<br>
+A. En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?<br>
 Respuesta: <br>
-...</td></tr>
+B. En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?<br>
+Respuesta: <br>
+C. ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil? <br>
+Respuesta: <br>
+D. Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?<br>
+Respuesta: <br>
+</td></tr>
 <tr><td>III. CONCLUSIONES
 <ul>
-<li>
-1.
-</li>
-<li>
-2.
-</li>
+<li>1.</li>
+<li>2.</li>
+<li>3.</li>
 </ul>
 </td></tr>
 </tbody>
@@ -100,7 +100,10 @@ Respuesta: <br>
 <tbody>
 <tr><td>I. BIBLIOGRAFÍA
 <ul>
-<li>1. ref1 </li>
+<li>https://www.w3schools.com/js/default.asp</li>
+<li>https://www.w3schools.com/js/js_ajax_intro.asp</li>
+<li>https://www.w3schools.com/nodejs/</li>
+<li>https://www.w3schools.com/html/</li>
 </ul>
 </td></tr>
 </tbody>
