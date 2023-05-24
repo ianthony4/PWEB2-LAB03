@@ -52,10 +52,14 @@ app.get('/listando', (request, response) => {
             console.error("Error al leer el directorio", error);
             return;
         }
-        //Recorriendo el directorio para listar los archivos
         //Enviando los archivos como respuesta al cliente
         //Convirtiendo los archivos en una cadena JSON
         response.json(archivos);
     });
 })
+
+//Ya podemosR, ahora debemos LEER estos archivos
+
+
+
 
