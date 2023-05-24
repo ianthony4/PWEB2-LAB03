@@ -19,10 +19,16 @@ app.get('/', (request, response) => {
 const directorio = "./private";
 //lee el contenido del directorio
 fs.readdir(directorio, (error, archivos) =>{
+    //En caso de error mostrara un mensaje en la consola
     if(error){
         console.error("Error al leer el directorio", error);
         return;
     }
-
+    //Recorriendo el directorio para listar los archivos
+    archivos.forEach((archivo) => {
+        //Imprimiendo en consola para probar
+        console.log(archivo);
+    });
     
-})
+    
+});
