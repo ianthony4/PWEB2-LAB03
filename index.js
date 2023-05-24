@@ -25,7 +25,8 @@ app.get('/', (request, response) => {
 
 //Responder a la peticion para guardar archivos
 app.post('/guardar',(request,response) => {
-    
+        let titulo = request.body.title + ".md"; //Extraemos del JSON el titulo
+        let contenido = request.body.content; //Extraemo del JSON el contenido
     }
 )
 
