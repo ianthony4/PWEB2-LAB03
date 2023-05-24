@@ -94,8 +94,11 @@ function mostrarArchivo(archivo){
             document.getElementById("s2").innerHTML = textoHTML;
         }
         //extraemos nuestros objetos
-        document.getElementById("mostarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
-        document.getElementById("elTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
+        //document.getElementById("mostarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
+        //document.getElementById("elTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
+        console.log(data.htmlText);
+        
+        console.log(data.markDownText);
     })
 
 }
