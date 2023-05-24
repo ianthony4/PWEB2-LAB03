@@ -11,15 +11,23 @@ app.use(express.static('pub'))
 
 app.listen(3000, () => {
     console.log("Escuchando en http://localhost:3000")
-}); 
+})
 
 //Body Parser nos ayudara a acceder al contenido del cuerpo en cada peticion
 //utilizamos body-parser
-app.use(bodyParser.urlencoded({extended:true}));
+//https://stackoverflow.com/questions/39870867/what-does-app-usebodyparser-json-do
+app.use(bodyParser.json()) //le decimos al sistema que usaremos JSON
+app.use(bodyParser.urlencoded({extended:true}))
 
 app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'index.html'))
 });
+
+//Responder a la peticion para guardar archivos
+app.post('/guardar',(request,response) => {
+    
+    }
+)
 
 //LISTAR DIRECTORIO
 
