@@ -56,4 +56,9 @@ function almacenarArchivoNuevo(){
         titulo: nombreArchivo,
         contenido: contenidoArchivo,
     }
+    const request = { //Objeto que mandaremos al servidor
+        method : "POST", //Tipo de metodo : POST
+        header : {"Content-Type" : "application/json"},
+        body : JSON.stringify(data), //Convertimos en objeto de tipo JSON
+    }
 }
