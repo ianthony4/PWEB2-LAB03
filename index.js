@@ -6,7 +6,11 @@ const fs = require('fs') //Esto ayudara a listar directorios
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
+//Markdown (Traducir Archivo)
+const MarkdownIt = require('markdown-it'),
+    md = new MarkdownIt(); //Servira para traducir MD a HTML
 const app = express()
+
 app.use(express.static('pub'))
 
 app.listen(3000, () => {
@@ -58,8 +62,10 @@ app.get('/listando', (request, response) => {
     });
 })
 
-//Ya podemosR, ahora debemos LEER estos archivos
+//Ya podemos CREAR, ahora debemos LEER estos archivos
+app.post("/leer",(request, response)=> {
 
+})
 
 
 
