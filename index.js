@@ -13,22 +13,23 @@ app.listen(3000, () => {
 }); 
 app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'index.html'))
-})
+});
 
 //LISTAR DIRECTORIO
 const directorio = "./private";
 //lee el contenido del directorio
-fs.readdir(directorio, (error, archivos) =>{
-    //En caso de error mostrara un mensaje en la consola
-    if(error){
-        console.error("Error al leer el directorio", error);
-        return;
-    }
-    //Recorriendo el directorio para listar los archivos
-    archivos.forEach((archivo) => {
-        //Imprimiendo en consola para probar
-        console.log(archivo);
+//Los archivos se almacenan en un arreglo llamado 'archivos'
+app.get('/listando', (request, response) => {
+    fs.readdir(directorio, (error, archivos) =>{
+        //En caso de error mostrara un mensaje en la consola
+        if(error){
+            console.error("Error al leer el directorio", error);
+            return;
+        }
+        //Recorriendo el directorio para listar los archivos
+        //Enviando los archivos como respuesta al cliente
+        //Convirtiendo los archivos en una cadena JSON
+        response.json(archivos);
     });
-    
-    
 });
+
