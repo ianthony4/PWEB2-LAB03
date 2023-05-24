@@ -51,6 +51,9 @@ function mostrarArchivo(archivo){
 function almacenarArchivoNuevo(){
     const nombreArchivo = document.getElementById("elTitulo").value;
     const contenidoArchivo = document.getElementById("elTexto").value;
-    console.log(nombreArchivo);
-    console.log(contenidoArchivo);
+    const url = "http://localhost:3000/guardar";
+    const data = {//Almacenmos los valores del titulo y contenido
+        titulo: nombreArchivo,
+        contenido: contenidoArchivo,
+    }
 }
