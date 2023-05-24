@@ -75,15 +75,15 @@ app.post("/leer",(request, response)=> {
             return;
         }
         //Caso satisfactorio
-        response.setHeader("Content-Type","apllication/json");
+        response.setHeader("Content-Type","application/json");
         response.end(
             JSON.stringify({
                 //Atributos
                 markDownText : file, //Aqui guardamos el contenido markdown
                 htmlText : md.render(file), //Aqui guardamos el contenido traducido a HTML
             })
-        )
-    })
+        );
+    });
 })
 
 
