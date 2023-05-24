@@ -66,7 +66,10 @@ app.get('/listando', (request, response) => {
 app.post("/leer",(request, response)=> {
     //extraemos el titulo del JSON request
     let elTitulo = request.body.titulo + ".md";
-    
+    //Ahora vamos a leer el archivo y lo almacenaremos un objeto file
+    fs.readFile(path.resolve(__dirname, "private/"+elTitulo),(err, file) => {
+        
+    })
 })
 
 
