@@ -43,5 +43,5 @@ function listar(x){
 document.addEventListener("DOMContentLoaded",listando());
 //Funcion que me mostrara el archivo al hacerle click 
 function mostrarArchivo(archivo){
-    console.log("Este es el archivo "+archivo);
+    
 }
