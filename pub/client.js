@@ -22,9 +22,11 @@ function listarArchivos(){
 }
 //Funcion para recorrer el arreglo y listarlo
 function listar(data){
+    let lista = `<ul><br>`;
     for(let i=0;i<data.length;i++){
-        
+        lista += `<li>`+data[i]+`</li>`;
     }
+    lista += `</ul><br>`;
 }
 //Segunda funcion para almacenar archivo nuevo
 
