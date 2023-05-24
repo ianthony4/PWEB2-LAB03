@@ -11,16 +11,17 @@ app.use(express.static('pub'))
 app.listen(3000, () => {
     console.log("Escuchando en http://localhost:3000")
 }); 
+
 app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'index.html'))
 });
 
 //LISTAR DIRECTORIO
-const directorio = "./private";
+
 //lee el contenido del directorio
 //Los archivos se almacenan en un arreglo llamado 'archivos'
 app.get('/listando', (request, response) => {
-    fs.readdir(directorio, (error, archivos) =>{
+    fs.readdir(path.resolve(__dirname,"private"), (error, archivos) =>{
         //En caso de error mostrara un mensaje en la consola
         if(error){
             console.error("Error al leer el directorio", error);
