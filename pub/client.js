@@ -40,7 +40,10 @@ function listar(x){
 }
 
 //Añadiendo EVENTO para que se muestre la lista
-document.addEventListener("DOMContentLoaded",listando());
+document.addEventListener("DOMContentLoaded",function(){
+    listando();
+    textoHTML = document.getElementById("s2").innerHTML;
+});
 
 
 //Funcion que creara el archivo Nuevo 
