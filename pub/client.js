@@ -4,7 +4,7 @@ function crearNuevoArchivo(){
     let remplazo = `<h4>Titulo</h4>
                     <input type="text" id="elTitulo" size="50"><br><br>
                     <h4>Ingrese Contenido Markdown</h4>
-                    <textarea type="text" id="elTexto" rows="30" cols="80"></textarea><br>
+                    <textarea type="text" id="editarTexto" rows="30" cols="80"></textarea><br>
                     <input type="button" id="almacenarArchivo" value="Creando Archivo" onclick="almacenarArchivoNuevo()">`;
     document.getElementById("s2").innerHTML = remplazo;
 }
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded",function(){
 //Usa la primera funcion de CrearNuevoArchivo()
 function almacenarArchivoNuevo(){
     const nombreArchivo = document.getElementById("elTitulo").value;
-    const contenidoArchivo = document.getElementById("elTexto").value;
+    const contenidoArchivo = document.getElementById("editarTexto").value;
     const url = "http://localhost:3000/guardar";
     const data = {//Almacenmos los valores del titulo y contenido
         titulo: nombreArchivo,
@@ -65,7 +65,7 @@ function almacenarArchivoNuevo(){
     let html = '<textarea type="text" id="elTexto" rows="30" cols="80" disable></textarea><br>';
     //vamos a crear otra espacio para poner el archivo MD arriba y el HTML traducido abajo
     //usamos class para GetElementByClass
-    html += '<div class="mostrarHtml"></div><br>';
+    html += '<div id="mostrarHtml"></div><br>';
     document.getElementById("s2").innerHTML = html; //Mostramos area de texto para observar el texto
     listando(); //Actualizamos la lista
 }
@@ -74,11 +74,12 @@ var textoHTML; //Variable para mostrar el texto en diferentes lugares (global)
 
 //Funcion que me mostrara (LEER) el archivo al hacerle click 
 function mostrarArchivo(archivo){
+    
     let elTitulo = archivo;
     const url = "http://localhost:3000/leer";
     const data = {
         //Almacenmos el titulo
-        titulo : elTitulo,
+        titulo : elTitulo
     }
     const request = { //Objeto para el server
         method : "POST", //metodo
@@ -86,16 +87,15 @@ function mostrarArchivo(archivo){
         body : JSON.stringify(data), //Convertimos el objeto en JSON (Serializamos)
     }
     //promesa
-    fetch(url, request).then(response => response.json())
-    .then(data => {
+    fetch(url, request).then(response => response.json()).then(data => {
         //Si no existe el tag, es porque no se almaceno archivo nuevo, entonces solo mostrar 
-        if(document.getElementsByClassName("mostrarHtml") == null){
+        if(document.getElementById("mostrarHtml") == null){
             //lo colocamos en la seccion2
             document.getElementById("s2").innerHTML = textoHTML;
         }
         //extraemos nuestros objetos
-        document.getElementsByClassName("mostarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
-        document.getElementById("verTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
+        document.getElementById("mostarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
+        document.getElementById("elTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
     })
 
 }
