@@ -58,14 +58,11 @@ function almacenarArchivoNuevo(){
     }
     const request = { //Objeto que mandaremos al servidor
         method : "POST", //Tipo de metodo : POST
-        header : {"Content-Type" : "application/json"},
+        headers : {"Content-Type" : "application/json"},
         body : JSON.stringify(data), //Convertimos en objeto de tipo JSON
     }
     fetch(url, request);
     let html = '<textarea type="text" id="elTexto" rows="30" cols="80" disable></textarea><br>';
-    document.getElementById("s2") = html; //Mostramos area de texto para observar el texto
+    document.getElementById("s2").innerHTML = html; //Mostramos area de texto para observar el texto
     listando(); //Actualizamos la lista
-
-
-
 }
