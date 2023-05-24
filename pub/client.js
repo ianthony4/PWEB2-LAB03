@@ -4,7 +4,7 @@ function crearNuevoArchivo(){
     let remplazo = `<h4>Titulo</h4>
                     <input type="text" id="elTitulo" size="50"><br><br>
                     <h4>Ingrese Contenido Markdown</h4>
-                    <textarea type="elTexto" rows="30" cols="80"></textarea><br>
+                    <textarea type="text" id="elTexto" rows="30" cols="80"></textarea><br>
                     <input type="button" id="almacenarArchivo" value="Creando Archivo" onclick="almacenarArchivoNuevo()">`;
     document.getElementById("s2").innerHTML = remplazo;
 }
@@ -50,5 +50,7 @@ function mostrarArchivo(archivo){
 //Usa la primera funcion de CrearNuevoArchivo()
 function almacenarArchivoNuevo(){
     const nombreArchivo = document.getElementById("elTitulo").value;
-    const contenidoArchivo = document.getElementById("elContenido").value;
+    const contenidoArchivo = document.getElementById("elTexto").value;
+    console.log(nombreArchivo);
+    console.log(contenidoArchivo);
 }
