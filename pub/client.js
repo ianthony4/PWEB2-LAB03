@@ -32,5 +32,8 @@ function listar(x){
     //retornando
     return lista;
 }
+
+//Añadiendo EVENTO para que se muestre la lista
+document.addEventListener("DOMContentLoaded",listando());
 //Segunda funcion para almacenar archivo nuevo
 
