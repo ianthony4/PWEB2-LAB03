@@ -77,5 +77,9 @@ function mostrarArchivo(archivo){
         headers : {"Content-Type" : "application/json"},
         body : JSON.stringify(data), //Convertimos el objeto en JSON (Serializamos)
     }
+    fetch(url, request).then(response => response.json())
+    .then(data => {
+        
+    })
 
 }
