@@ -31,5 +31,5 @@ app.get('/listando', (request, response) => {
         //Convirtiendo los archivos en una cadena JSON
         response.json(archivos);
     });
-});
+})
 
