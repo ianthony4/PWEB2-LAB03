@@ -2,7 +2,7 @@
 //npm install body-parser
 //npm install markdown-it --save
 //npm install express
-const fs = require('fs')
+const fs = require('fs') //Esto ayudara a listar directorios
 const path = require('path')
 const express = require('express')
 const app = express()
@@ -13,4 +13,16 @@ app.listen(3000, () => {
 }); 
 app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'index.html'))
+})
+
+//LISTAR DIRECTORIO
+const directorio = "./private";
+//lee el contenido del directorio
+fs.readdir(directorio, (error, archivos) =>{
+    if(error){
+        console.error("Error al leer el directorio", error);
+        return;
+    }
+
+    
 })
