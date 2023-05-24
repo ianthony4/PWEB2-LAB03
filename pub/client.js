@@ -10,7 +10,7 @@ function crearNuevoArchivo(){
 }
 //Listar Archivos
 //Esta funcion pedira al servidor la lista de archivos
-function listarArchivos(){
+function listando(){
     //en esta direccion sacaremos la informacion
     const url = "http://localhost:3000/listando";
     fetch(url).then(
@@ -25,7 +25,7 @@ function listarArchivos(){
 //Funcion para recorrer el arreglo y listarlo
 function listar(x){
     let lista = `<ul><br>`;
-    for(let i=0;i<data.length;i++){
+    for(let i=0;i<x.length;i++){
         lista += `<li>`+x[i]+`</li>`;
     }
     lista += `</ul><br>`;
