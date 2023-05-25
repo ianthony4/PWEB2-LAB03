@@ -61,20 +61,35 @@
 <tbody>
 <tr><td>I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS<br>
 A. Solucion del Trabajo Grupal:<br>
-<br>Pasos a detalle...
-<br>1.
-<br>2.
-<br>3.
+<ul>
+<li>Durante el desarrollo de esta practica se tuvieron MUCHAS DIFICULTADES:</li>
+Mencionaremos algunas, pero ahora la mas importante.
+<ul><li>Conexion entre los pedidos de client.js al servidor:</li>
+Me parecio un tema bastante delicado, saber que como recoger los objetos, como extraer la informacion de los objetos, como mandar objetos, etc.<br>
+Por otro lado el listado de directorios tambien fue un tema de busqueda, no fue complicado pero si interesante, donde el uso de "fs" lee, escribe, crea archivos, directorios, etc.
+<li>Uso de Bibliotecas ($ npm)</li>
+Es cierto que el docente, proporciono las bibliotecas completas (fs, body-parser, markdownIt) pero su uso para este laboratorio fue de un espectro personalmente mas amplio, nada fuera del otro mundo, pero tuvo trabajo
+<img src="./labImg/npm.png"></ul>
+<li>Por otro lado, se aprendio nuevas cosas:</li>
+Donde los pedidos por metodos GET y POST requieren una forma distinta de asignarlos a sus objetos JSON.
+<ul><li>Peticiones por GET, solo necesitan la url</li><img src="./labImg/get.png">
+<li>Peticiones por POST, necesitan que nosotros creemos el JSON de forma manual, indicando el metodo, el header y debemos SERIALIZAR los objetos JSON donde estaran los datos enviados</li><img src="./labImg/post.png"></ul>
+<ul><li>Uso, del "querySelector()":</li>
+Se tuvo que reestructurar el archivo "index.html" debido a que la estructura original era muy "complicada" de entender, se hacia un uso excesivo de los "id's", donde llegaron incluso a confundirme, crear una nueva estructura HTML limpia y planificada, trajo consigo mejores beneficios: <ul><li>HTML mas facil de entender</li><li>Referencias a las clases, secciones, id's y tag en general con mas claridad para usarlo en el "client.js"</li><li>Creacion de un archivo CSS mas simple de entender</li></ul><ul></ul>
 </td></tr>
 <tr><td>II. SOLUCIÓN DEL CUESTIONARIO<br>
 A. En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?<br>
 Respuesta: <br>
+<ul><li></li></ul>
 B. En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?<br>
 Respuesta: <br>
+<ul><li></li></ul>
 C. ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil? <br>
 Respuesta: <br>
+<ul><li></li></ul>
 D. Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?<br>
 Respuesta: <br>
+<ul><li></li></ul>
 </td></tr>
 <tr><td>III. CONCLUSIONES
 <ul>
