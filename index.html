@@ -6,31 +6,32 @@
         <title>Laboratorio 03</title>
         <!--Aqui llamaremos al script que se crea en el lado del cliente (Carpeta PUB)-->
         <script src="client.js"></script>
+        <link rel="stylesheet" href="style.css">
         <!--De manera opcional aqui podemos agregar una hoja de estilo-->
     </head>
     <body>
-        <h2>Archivos Markdown</h2>
-        <!--Repartiremos el cuerpo del html en 3 secciones para una mejor interpretacion-->
-        <!--s1 -> seccion 1 // s2 -> seccion2 // s3 -> seccion 3-->
-        <div id="s1">
-            <!-- Aqui deben ir la lista de los archivos creados-->
-            <!-- Aqui iran los labels y el llamada a las diferentes funciones-->
+        <!--Usaremos la TAG, HEADER Y EN VEZ DE ID'S USAREMOS TAGS, PENSANDO TAMBIEN EN CSS-->
+        <header>
+            <h2>Archivos Markdown</h2>
+        </header>
+        <div class="contenedor">
+            <section class="listaArchivos">
+                <h2>Listado de Archivos</h2>
+                <div id="listadoArchivos"></div>
+                <input type="button" id="nuevoArchivo" value="Archivo Nuevo" onclick="crearNuevoArchivo()">
+            </section>
+            <section class="main">
+                <!--Textarea, contenido MD y HTML-->
+                <h2>Contenido en Markdown</h2>
+                <textarea id="verTexto" rows="30" cols="80" disable></textarea>
+                <h2>Contenido HTML</h2>
+                <div class="mostrarHtml"></div>
+            </section>
         </div>
-        <!-- Aqui se colocara el formulario para crear un nuevo archivo-->
-        <div id="s2">
-            <!--este boton creara nuevos archivos, llamando a la funcion 'crearNuevoArchivo()'-->
-            <input type="button" id="nuevoArchivo" value="Archivo Nuevo" onclick="crearNuevoArchivo()">
-            <h2>Contenido Markdown</h2>
-            <!--TextArea desabilitado debido a que por ahora lo usaremos para ver el contenido del markdown-->
-            <textarea id="verTexto" rows="30" cols="80" disabled></textarea>
-            <h2>Contenido en HTML</h2>
-            <!--Aqui remplazaremos en el futuo, seguramente usando un DIV para intercambiarlo por el innnerHTML-->
-        </div>
-        <div id="s3">
+        <footer>
+            <!--Informacion adicional, tag para acompañar header-->
             <p>Chaisa Fernandez, Anthony Leonel</p>
-            <a href="https://github.com/ianthony4/PWEB2-LAB03">Repositorio de esste proyecto</a>
-        </div>
-        
+            <a href="https://github.com/ianthony4/PWEB2-LAB03">Repositorio de este proyecto</a>
+        </footer>
     </body>
-    
 </html>

@@ -6,7 +6,11 @@ const fs = require('fs') //Esto ayudara a listar directorios
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
+//Markdown (Traducir Archivo)
+const MarkdownIt = require('markdown-it'),
+    md = new MarkdownIt(); //Servira para traducir MD a HTML
 const app = express()
+
 app.use(express.static('pub'))
 
 app.listen(3000, () => {
@@ -46,16 +50,41 @@ app.post('/guardar',(request,response) => {
 //lee el contenido del directorio
 //Los archivos se almacenan en un arreglo llamado 'archivos'
 app.get('/listando', (request, response) => {
-    fs.readdir(path.resolve(__dirname,"private"), (error, archivos) =>{
+    fs.readdir(path.resolve(__dirname,"private"),"utf8", (error, archivos) =>{
         //En caso de error mostrara un mensaje en la consola
         if(error){
             console.error("Error al leer el directorio", error);
             return;
         }
-        //Recorriendo el directorio para listar los archivos
         //Enviando los archivos como respuesta al cliente
         //Convirtiendo los archivos en una cadena JSON
         response.json(archivos);
     });
 })
+
+//Ya podemos CREAR, ahora debemos LEER estos archivos
+app.post("/leer",(request, response)=> {
+    //extraemos el titulo del JSON request
+    let elTitulo = request.body.titulo + ".md";
+    //Ahora vamos a leer el archivo y lo almacenaremos un objeto file
+    fs.readFile(path.resolve(__dirname, "private/"+elTitulo),"utf8",(err, file) => {
+        //Manejo de errores (excepciones)
+        if(err){
+            console.log("El archivo NO existe");
+            console.log(err);
+            return;
+        }
+        //Caso satisfactorio
+        response.setHeader("Content-Type","application/json");
+        response.end(
+            JSON.stringify({
+                //Atributos
+                markDownText : file, //Aqui guardamos el contenido markdown
+                htmlText : md.render(file), //Aqui guardamos el contenido traducido a HTML
+            })
+        );
+    });
+})
+
+
 
