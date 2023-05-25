@@ -11,20 +11,26 @@
     <body>
         <!--Usaremos la TAG, HEADER Y EN VEZ DE ID'S USAREMOS TAGS, PENSANDO TAMBIEN EN CSS-->
         <header>
-            <h2></h2>
+            <h2>Archivos Markdown</h2>
         </header>
         <div class="contenedor">
             <section class="listaArchivos">
-                <h2></h2>
+                <h2>Listado de Archivos</h2>
                 <div id="listadoArchivos"></div>
-                <input>
+                <input type="button" id="nuevoArchivo" value="Archivo Nuevo" onclick="crearNuevoArchivo()">
             </section>
             <section class="main">
                 <!--Textarea, contenido MD y HTML-->
+                <h2>Contenido en Markdown</h2>
+                <textarea id="verTexto" rows="8" cols="80" disable></textarea>
+                <h2>Contenido HTML</h2>
+                <div class="mostrarHtml"></div>
             </section>
         </div>
         <footer>
             <!--Informacion adicional, tag para acompañar header-->
+            <p>Chaisa Fernandez, Anthony Leonel</p>
+            <a href="https://github.com/ianthony4/PWEB2-LAB03">Repositorio de este proyecto</a>
         </footer>
 
 
@@ -32,8 +38,8 @@
 
 
 
+
         
-        <h2>Archivos Markdown</h2>
         
         <!--s1 -> seccion 1 // s2 -> seccion2 // s3 -> seccion 3-->
         <div id="s1">
