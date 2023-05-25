@@ -39,11 +39,6 @@ function listar(x){
     return lista;
 }
 
-//Añadiendo EVENTO para que se muestre la lista
-document.addEventListener("DOMContentLoaded",function(){
-    listando();
-    textoHTML = document.getElementById("s2").innerHTML;
-});
 
 
 //Funcion que creara el archivo Nuevo 
@@ -89,16 +84,18 @@ function mostrarArchivo(archivo){
     //promesa
     fetch(url, request).then(response => response.json()).then(data => {
         //Si no existe el tag, es porque no se almaceno archivo nuevo, entonces solo mostrar 
-        if(document.querySelector(".mostrarHtml") == null){
-            //lo colocamos en la seccion2
+        if(document.querySelector(".mostrarHtml") == null)
             document.querySelector(".main").innerHTML = textoHTML;
-        }
         //extraemos nuestros objetos
-        document.querySelector(".mostarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
-        document.querySelector("#editarTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
+        document.querySelector(".mostrarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
+        document.querySelector("#verTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
         //console.log(data.htmlText);
-        
         //console.log(data.markDownText);
     })
 
 }
+//Añadiendo EVENTO para que se muestre la lista
+document.addEventListener("DOMContentLoaded",function(){
+    listando();
+    textoHTML = document.querySelector(".main").innerHTML;
+});
