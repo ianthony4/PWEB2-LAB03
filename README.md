@@ -78,24 +78,26 @@ Donde los pedidos por metodos GET y POST requieren una forma distinta de asignar
 Se tuvo que reestructurar el archivo "index.html" debido a que la estructura original era muy "complicada" de entender, se hacia un uso excesivo de los "id's", donde llegaron incluso a confundirme, crear una nueva estructura HTML limpia y planificada, trajo consigo mejores beneficios: <ul><li>HTML mas facil de entender</li><li>Referencias a las clases, secciones, id's y tag en general con mas claridad para usarlo en el "client.js"</li><li>Creacion de un archivo CSS mas simple de entender</li></ul><ul></ul>
 </td></tr>
 <tr><td>II. SOLUCIÓN DEL CUESTIONARIO<br>
-A. En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?<br>
+<b>A. En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?</b><br>
 Respuesta: <br>
-<ul><li></li></ul>
-B. En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?<br>
+<ul><li>No se uso, pero tengo entendido que el cliente traduce la ventana con una plantilla html preinstalada,  la cabecera "content-type" indica al cliente (generalmente un navegador web) el tipo de datos que está recibiendo en la respuesta del servidor. para los demas ejercicios resueltos se indico que el contenido de la respuesta es un archivo  en formato JSON</li></ul>
+<b>B. En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?</b><br>
 Respuesta: <br>
-<ul><li></li></ul>
-C. ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil? <br>
+<ul><li>Deberia ubicarse en la carpeta 'priv', exactamente en "./priv/poema.txt"</li>
+<img src="./labImg/ubi.png"></ul>
+<b>C. ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil? </b><br>
 Respuesta: <br>
-<ul><li></li></ul>
-D. Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?<br>
+<ul><li>Se usaron para remplazar los saltos de linea "\n" por la etiqueta "br", para que el texto en html se muestre de forma original al texto ubicado en .txt</li>
+<img src="./labImg/exp.png"></ul>
+<b>D. Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?</b><br>
 Respuesta: <br>
-<ul><li></li></ul>
+<ul><li>El motodo "response.send() envia cadena y arrays sin necesidad de usar JSON, es una alternativa para verlo de forma directa</li></ul>
 </td></tr>
 <tr><td>III. CONCLUSIONES
-<ul>
-<li>1.</li>
-<li>2.</li>
-<li>3.</li>
+<ul><br>
+<li>NodeJS resulto ser un herramienta interesante en JavaScript, sobretodo porque esta enfocado en el lado del BACKEND, donde se demostro que podemos manupular archivos, procesar de forma asincrona, tambien el uso de los diferentes paquetes facilita la aplicacion de los diferentes tipos de proyectos.</li><br>
+<li>AJAX por otro lado, es una tecnica importante para ejecutar solicitudes de forma asincronas al servidor y actualizar partes especificas de una pagina, SIN TENER QUE RECARGARLA por completo, muy util.</li>
+
 </ul>
 </td></tr>
 </tbody>
@@ -120,6 +122,8 @@ Respuesta: <br>
 <li>https://www.w3schools.com/nodejs/</li>
 <li>https://www.w3schools.com/html/</li>
 <li>https://expressjs.com/en/guide/migrating-4.html</li>
+<li>https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch</li>
+<li>https://www.w3schools.com/js/js_api_fetch.asp</li>
 </ul>
 </td></tr>
 </tbody>
