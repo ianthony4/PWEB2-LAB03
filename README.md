@@ -60,6 +60,7 @@
 </theader>
 <tbody>
 <tr><td>I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS<br>
+<ul><li>FligGrip : https://flip.com/s/hxpshQqPHAxG</li></ul>
 A. Solucion del Trabajo Grupal:<br>
 <ul>
 <li>Durante el desarrollo de esta practica se tuvieron MUCHAS DIFICULTADES:</li>
