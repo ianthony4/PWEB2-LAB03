@@ -2,7 +2,7 @@
 //Creando la funcion
 function crearNuevoArchivo(){
     let remplazo = `<h4>Titulo</h4>
-                    <input type="text" id="elTitulo" size="50"><br><br>
+                    <input type="text" id="elTituloNuevo" size="50"><br><br>
                     <h4>Ingrese Contenido Markdown</h4>
                     <textarea type="text" id="editarTexto" rows="30" cols="80"></textarea><br>
                     <input type="button" id="almacenarArchivo" value="Creando Archivo" onclick="almacenarArchivoNuevo()">`;
@@ -94,11 +94,11 @@ function mostrarArchivo(archivo){
             document.getElementById("s2").innerHTML = textoHTML;
         }
         //extraemos nuestros objetos
-        //document.getElementById("mostarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
-        //document.getElementById("elTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
-        console.log(data.htmlText);
+        document.getElementById("mostarHtml").innerHTML = data.htmlText;//Aqui obtendremos nuestro HTML
+        document.getElementById("editarTexto").value = data.markDownText; //Preaparamos index.js para recibir los objetos MD y HTML
+        //console.log(data.htmlText);
         
-        console.log(data.markDownText);
+        //console.log(data.markDownText);
     })
 
 }
